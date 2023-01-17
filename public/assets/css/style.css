@@ -1,0 +1,89 @@
+/*General page styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.content-container {
+    background-color: #dee2ff;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+
+
+}
+/*Header code*/
+
+.header-container{
+    width: 100%;
+    height: 70px;
+    font-family: 'Poppins';
+    color: white;
+    background-color: #00a896;
+    -webkit-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+.header-options {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-title {
+    margin-left: 10px;
+}
+
+
+.header-wrapper li {
+    transition: .5s;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.header-wrapper li:hover {
+    color: gray;
+}
+
+/*Footer code*/
+
+.footer-container{
+    background-color: #00a896;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    padding: 15px;
+    color: white;
+}
+
+.footer-item {
+    color: white;
+}
+
+.statebox-container {
+    height: 100%;
+
+}
+
