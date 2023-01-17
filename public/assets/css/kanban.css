@@ -1,0 +1,37 @@
+
+.statebox-wrap {
+    height: 500px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 7px;
+    -webkit-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75);
+}
+
+.statebox-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+
+.statebox-title h1 {
+    font-family: Roboto;
+    color: #fff;
+}
+
+@media (max-width: 1000px)
+{
+
+    .content-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .statebox-wrap {
+        width: 300px;
+    }
+}

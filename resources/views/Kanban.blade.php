@@ -8,7 +8,11 @@
 
     @section('content')
     <div class="content-container">
-    <x-StateBox/>
+
+        <x-StateBox name="Á FAZER" colortitle='#4361ee'/>
+        <x-StateBox name="EM PROGRESSO" colortitle='#f4a259'/>
+        <x-StateBox name="TERMINADO" colortitle='#7ae582'/>
+
     </div>
 
     @endsection
