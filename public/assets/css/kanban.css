@@ -1,10 +1,10 @@
 
 .statebox-wrap {
-    height: 500px;
+    height: 600px;
     width: 350px;
     display: flex;
-    justify-content: center;
-    background-color: #fff;
+    flex-direction: column;
+    background-color: #3d405b;
     border-radius: 7px;
     -webkit-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75);
@@ -22,6 +22,35 @@
 .statebox-title h1 {
     font-family: Roboto;
     color: #fff;
+}
+
+.task {
+    margin: 10px;
+    padding: 10px 10px;
+    width: 90%;
+    background-color: #262b56;
+    border-radius: 7px;
+}
+
+.task-title p{
+    color: #fff;
+    font-family: Roboto;
+    margin: 10px;
+    text-align: center;
+}
+
+.task-body {
+    margin: 10px;
+    text-align: center;
+    font-family:'Nunito';
+    color:#fff;
+}
+
+.taskelements-separation {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 1000px)
