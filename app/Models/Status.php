@@ -12,4 +12,8 @@ class Status extends Model
     [
         'name','kanban_id'
     ];
+
+    public function task() {
+        return $this->hasMany(Task::class);
+    }
 }

@@ -27,6 +27,11 @@ body {
     flex-direction: column;
     font-family: 'Poppins';
 }
+
+/* 
+Área de cima do site 
+*/
+
 .top-area{
     display: flex;
     padding: 5px;
@@ -55,7 +60,19 @@ hr {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+.header-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
 
+/*
+Fim da área de cima do site
+*/
+
+
+/* Inicio da área do meio */
 .default-button{
     padding: 6px;
     background-color: var(--blue);
@@ -86,18 +103,6 @@ hr {
 
 }
 
-.bottom-area{
-    display: flex;
-}
-
-.header-item{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-}
-
-/*Parte do meio do site*/
 .content{
     width: 100%;
     height: 100%;

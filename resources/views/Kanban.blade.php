@@ -12,9 +12,6 @@
         <x-StateBox name="EM PROGRESSO" colortitle='#f4a259' wip="3/4"/>
         <x-StateBox name="TERMINADO" colortitle='#7ae582' wip=""/>
     </div>
-
     @endsection
-
-
 
 </div>

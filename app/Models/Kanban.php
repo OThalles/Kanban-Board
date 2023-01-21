@@ -13,4 +13,10 @@ class Kanban extends Model
     [
         'name', 'user_id'
     ];
+
+    public function status()
+    {
+        return $this->hasMany(Status::class);
+    }
+
 }

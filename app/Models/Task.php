@@ -10,6 +10,11 @@ class Task extends Model
     use HasFactory;
     protected $fillable =
     [
-        'kanban_id','state'
+        'title','body','status_id'
     ];
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
 }
