@@ -33,7 +33,9 @@
                 <div class="content-text">
                         <h1 class="main-text">Planeje seus projetos de
                             maneira efetiva com um Kanban Board! </h1>
+
                             <div class="default-button big-button">Começar</div>
+
                 </div>
                 <div class="svg">
                     <svg style="display:block"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="3" d="M0,96L360,288L720,224L1080,128L1440,96L1440,320L1080,320L720,320L360,320L0,320Z"></path></svg>

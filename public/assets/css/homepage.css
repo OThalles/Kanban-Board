@@ -28,14 +28,15 @@ body {
     font-family: 'Poppins';
 }
 
-/* 
-Área de cima do site 
+/*
+Área de cima do site
 */
 
 .top-area{
     display: flex;
     padding: 5px;
     width: 100%;
+    background-color: #fff;
 
 }
 
@@ -121,13 +122,16 @@ Fim da área de cima do site
     text-align: center;
 }
 
+
+
+
 .content-text{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
-    height: 300px;
+    height: 100%;
     color: #fff;
 
 }
