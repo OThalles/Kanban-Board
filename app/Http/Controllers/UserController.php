@@ -18,7 +18,12 @@ class UserController extends Controller
 
     public function register()
     {
-        view('register');
+        return view('register');
+    }
+
+    public function login()
+    {
+        return view('login');
     }
 
     public function store(Request $request)

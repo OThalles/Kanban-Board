@@ -12,7 +12,7 @@
         <p>Titulo</p>
         <input type="text" placeholder="Título da tarefa" class="addtask title" autocomplete="off">
         <p>Objetivo da tarefa</p>
-        <input type="text" name="kanbanbody" class="addtask" id="addtask" placeholder="Insira uma tarefa ao Kanban" autocomplete="off">
+        <input type="text" name="kanbanbody" class="addtask" id="addtask" placeholder="Insira uma tarefa ao Kanban" autocomplete="off" >
     </div>
     <div class="content-container">
         <x-StateBox name="Á FAZER" input="Y" colortitle='#4361ee' wip=""/>

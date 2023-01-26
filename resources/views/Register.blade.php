@@ -1,1 +1,6 @@
-@extends('layouts.auth', ['title' => 'Register'])
+@extends('layouts.auth', ['title' => 'Registrar'])
+
+@section('content')
+    <x-auth/>
+@endsection
+

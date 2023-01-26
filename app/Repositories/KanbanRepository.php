@@ -5,11 +5,11 @@ use App\Interfaces\KanbanRepositoryInterface;
 use App\Models\Kanban;
 
 
-class KanbanRepository
+class KanbanRepository implements KanbanRepositoryInterface
 {
-    public function getAll()
+    public function getKanbans($user)
     {
-        return '';
+        $data = Kanban::where('user_id', $user->id)->get();
     }
 
     public function getOne()

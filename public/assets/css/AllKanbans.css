@@ -1,0 +1,29 @@
+.AllKanbans-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    font-family: 'Roboto';
+}
+
+.AllKanbans-wrapper{
+    display: flex;
+    width: 80%;
+    height:  90%;
+    -webkit-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75);
+    border-radius: 8px;
+    background-color: #3d405b;
+    flex-direction:column;
+}
+
+.Kanban{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: #262b56;
+    width: 100%;
+    height: 15%;
+}

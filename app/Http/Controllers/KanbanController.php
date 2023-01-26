@@ -13,4 +13,5 @@ class KanbanController extends Controller
     {
         $this->kanbanService = $kanbanService;
     }
+
 }

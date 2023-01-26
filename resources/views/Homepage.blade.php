@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('assets/css/homepage.css')}}">
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
@@ -21,8 +19,12 @@
             <div class="header-item">
                 <h1>Kanban</h1>
                 <div class="top-buttons">
-                <div class="menu-item">Criar conta</div>
-                <div class="menu-item">Entrar</div>
+                <div class="menu-item">
+                    <a href="{{route('register')}}">Criar conta</a>
+                </div>
+                <div class="menu-item">
+                   <a href="{{route('login')}}">Entrar</a>
+                </div>
                  </div>
             </div>
 

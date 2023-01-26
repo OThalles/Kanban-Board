@@ -11,4 +11,9 @@ class KanbanService
     {
         $this->kanbanRepository = $kanbanRepository;
     }
+
+    public function getKanbans($user)
+    {
+        return $this->kanbanRepository->getKanbans($user);
+    }
 }
