@@ -13,15 +13,12 @@
                         @csrf
 
                         @if(Route::is('register'));
-                        <input type="text" name="name" placeholder="Digite seu nome" class="authinput">
+                        <input type="text" name="name" placeholder="Digite seu nome" class="authinput" autocomplete="off">
+                        <input type="password" name="confirmPassword" placeholder="Confirme sua senha" class="authinput" autocomplete="off">
                         @endif
 
-                        <input type="text" name="email" placeholder="Digite seu email" class="authinput">
-                        <input type="password" name="password" placeholder="Digite sua senha" class="authinput">
-
-                        @if(Route::is('register'))
-                        <input type="password" name="confirmPassword" placeholder="Confirme sua senha" class="authinput">
-                        @endif
+                        <input type="text" name="email" placeholder="Digite seu email" class="authinput" autocomplete="off">
+                        <input type="password" name="password" placeholder="Digite sua senha" class="authinput" autocomplete="off">
 
                         <button class="submitbutton">{{(Route::is('register')) ? 'Criar conta':'Fazer Login'}}</button>
 

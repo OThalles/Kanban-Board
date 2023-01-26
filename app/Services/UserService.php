@@ -3,7 +3,9 @@ namespace App\Services;
 
 use App\Interfaces\UserRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+
 
 class UserService
 {
@@ -26,6 +28,34 @@ class UserService
 
         if($credentials){
             $this->userRepository->create($request->all());
+            return redirect()->route('/home');
         }
+    }
+
+    public function auth(Request $request)
+    {
+        $credentials = Validator::make($request->all(),
+        [
+            'email' => 'required|email|unique:users',
+            'password' => 'required',
+        ]);
+
+        $credentials = $request->only('email', 'password');
+
+        if(Auth::attempt($credentials))
+        {
+            return redirect()->route('home');
+        }
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login');
     }
 }

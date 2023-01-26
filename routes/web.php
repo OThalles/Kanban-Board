@@ -23,10 +23,11 @@ Route::get('/kanban', function() {
     return view('Kanban');
 });
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
 
 
 Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::post('/register', [UserController::class, 'store'])->name('newUser');
 Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::post('/login', [UserController::class, 'auth']);
+Route::post('/logout', [UserController::class, 'logout'])->name('logout');

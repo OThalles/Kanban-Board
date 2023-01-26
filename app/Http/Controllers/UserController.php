@@ -28,16 +28,17 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        $this->userService->newUser($request);
+        return $this->userService->newUser($request);
     }
 
     public function auth(Request $request)
     {
-
+        return $this->userService->auth($request);
     }
 
     public function logout(Request $request)
     {
+        return $this->userService->logout($request);
 
     }
 }
