@@ -18,7 +18,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        $data = $this->kanbanService->getKanbans(Auth::user());
+        $data = $this->kanbanService->getKanbans(Auth::user()->id);
+
         return view('AllKanbans', ['data' => $data]);
     }
 }

@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('kanbans', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->null(FALSE);
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });

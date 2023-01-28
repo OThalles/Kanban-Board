@@ -28,7 +28,7 @@ class UserService
 
         if($credentials){
             $this->userRepository->create($request->all());
-            return redirect()->route('/home');
+            return redirect()->route('home');
         }
     }
 
@@ -46,6 +46,7 @@ class UserService
         {
             return redirect()->route('home');
         }
+        return redirect()->back();
     }
 
     public function logout(Request $request)
@@ -56,6 +57,5 @@ class UserService
 
         $request->session()->regenerateToken();
 
-        return redirect()->route('login');
     }
 }

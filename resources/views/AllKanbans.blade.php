@@ -7,15 +7,11 @@
 @section('content')
     <div class="AllKanbans-container">
         <div class="AllKanbans-wrapper">
-            {{$data}}
-            <div class="Kanban">Lorem ipsum dolor ame sit</div>
-            <div class="Kanban">Lorem ipsum dolor ame sit</div>
-            <div class="Kanban">Lorem ipsum dolor ame sit</div>
-            <div class="Kanban">Lorem ipsum dolor ame sit</div>
-            <div class="Kanban">Lorem ipsum dolor ame sit</div>
-            <div class="Kanban">Lorem ipsum dolor ame sit</div>
-            <div class="Kanban">Lorem ipsum dolor ame sit</div>
-            <div class="Kanban">Lorem ipsum dolor ame sit</div>
+            @if(!empty($data))
+            @foreach($data as $kanban)
+            <div class="Kanban">{{$kanban->name}}</div>
+            @endforeach
+            @endif
 
 
         </div>

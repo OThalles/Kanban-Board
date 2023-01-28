@@ -9,7 +9,8 @@ class KanbanRepository implements KanbanRepositoryInterface
 {
     public function getKanbans($user)
     {
-        $data = Kanban::where('user_id', $user->id)->get();
+        $data = Kanban::where('user_id', $user)->get();
+        return $data;
     }
 
     public function getOne()

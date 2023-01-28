@@ -23,7 +23,7 @@ class UserControllerTest extends TestCase
      * @return void
      */
 
-    public function TestIfRouteRedirectIfEmailExistsOnRegisteringUser()
+    public function TestIfRouteAreRedirectingIfEmailExistsOnRegisteringUser()
     {
         $request = $this->post(route('newUser',['name' => $this->user['name'],
          'email' => $this->user['email'],
