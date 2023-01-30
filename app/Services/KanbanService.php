@@ -16,4 +16,14 @@ class KanbanService
     {
         return $this->kanbanRepository->getKanbans($user);
     }
+
+    public function create($request,$user)
+    {
+        $data = [
+            'name' => $request->name,
+            'user_id' => $user
+        ];
+
+        return $this->kanbanRepository->create($data);
+    }
 }

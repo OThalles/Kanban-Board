@@ -17,7 +17,13 @@ class KanbanController extends Controller
 
     public function index()
     {
+
         return view('Kanban');
+    }
+
+    public function create(Request $request)
+    {
+        return $this->kanbanService->create($request, Auth::user()->id);
     }
 
 }

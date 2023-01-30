@@ -20,9 +20,10 @@ Route::get('/', function () {
     return view('Homepage');
 });
 
-Route::get('/kanban', [KanbanController::class, 'index']);
+Route::get('/kanban', [KanbanController::class, 'index'])->middleware('auth');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::post('/newKanban', [KanbanController::class, 'create']);
 
 
 Route::get('/register', [UserController::class, 'register'])->name('register');

@@ -1,8 +1,15 @@
+
+:root {
+    --blue: #3a86ff;
+    --white: #fff;
+  }
+
 .AllKanbans-container{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 90%;
     font-family: 'Roboto';
 }
@@ -17,7 +24,9 @@
     border-radius: 8px;
     background-color: #3d405b;
     flex-direction:column;
+
 }
+
 
 .Kanban{
     display: flex;
@@ -26,4 +35,131 @@
     background-color: #262b56;
     width: 100%;
     height: 15%;
+}
+
+.home-table{
+    color: #fff;
+    max-width: 100%;
+    text-align: center;
+}
+
+
+.home-table tr td {
+    overflow-x: auto;
+    padding: 10px;
+    background-color: #262b56;
+}
+
+.home-table tr th {
+    background-color: #00a896;
+    padding: 5px;
+    overflow-x: auto;
+}
+
+.button-option {
+    padding: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 5px;
+    margin: 5px;
+    cursor:pointer;
+}
+
+.popup-container{
+    background-color: rgba(0,0,0,0.5);
+    animation: fade .4s;
+    display: flex;
+    position: absolute;
+    display: none;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.popup{
+    width: 60%;
+    height: 150px;
+    background-color: #1b263b;
+    color: var(--white);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 7px 0px 7px 7px;
+    -webkit-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75);
+}
+.popup p{
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.popup-items-container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Poppins';
+}
+
+.popup-close{
+
+    cursor: pointer;
+    position:absolute;
+    top:-20px;
+    width: 20px;
+    right: 0px;
+}
+
+
+
+.popup-input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    outline: 0;
+    background-color: #0d1b2a;
+    color: var(--white);
+    border: 2px solid black;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    outline: 0;
+}
+
+.popup-input::placeholder{
+    color: var(--white);
+    font-family: 'Roboto';
+}
+
+.popup-item{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.savechanges{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    text-align: center;
 }

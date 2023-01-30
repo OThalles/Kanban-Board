@@ -17,4 +17,9 @@ class KanbanRepository implements KanbanRepositoryInterface
     {
         return '';
     }
+
+    public function create($data): void
+    {
+        Kanban::create($data);
+    }
 }
