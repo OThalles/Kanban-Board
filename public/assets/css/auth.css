@@ -98,6 +98,7 @@ body {
     font-family: 'Nunito';
     background-color: #4361ee;
     color:#fff;
+    cursor: pointer;
 }
 
 .submitbutton:hover{

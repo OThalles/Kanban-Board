@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('kanbans', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('name')->null(FALSE);
-            $table->unsignedBigInteger('user_id');
+            $table->uuid('user_id')->nullable(false);
             $table->timestamps();
         });
     }

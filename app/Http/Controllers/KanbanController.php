@@ -15,15 +15,16 @@ class KanbanController extends Controller
         $this->kanbanService = $kanbanService;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-
-        return view('Kanban');
+        $data = $this->kanbanService->getOne($request, Auth::User()->id);
+        return view('Kanban', ['data' => $data]);
     }
 
     public function create(Request $request)
     {
-        return $this->kanbanService->create($request, Auth::user()->id);
+        header('Content-Type: application/json');
+        return $this->kanbanService->create($request, Auth::user()->id);;
     }
 
 }

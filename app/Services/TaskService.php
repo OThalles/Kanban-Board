@@ -11,4 +11,9 @@ class TaskService
     {
         $this->taskRepository = $taskRepository;
     }
+
+    public function create($data)
+    {
+
+    }
 }

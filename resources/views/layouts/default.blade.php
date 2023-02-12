@@ -27,6 +27,4 @@
 
 </body>
 
-<script src="{{asset('assets/js/Kanban.js')}}"></script>
-
 </html>

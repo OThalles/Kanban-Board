@@ -11,7 +11,12 @@
     justify-content: center;
     flex-direction: column;
     height: 90%;
+    overflow-y: hidden;
     font-family: 'Roboto';
+}
+
+.AllKanbans-options{
+
 }
 
 .AllKanbans-wrapper{
@@ -57,12 +62,21 @@
 }
 
 .button-option {
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 15px;
     padding: 10px;
     background-color: var(--blue);
     color: var(--white);
     border-radius: 5px;
     margin: 5px;
+    border: none;
     cursor:pointer;
+}
+
+.button-option:hover{
+    transition: 0.4s;
+    background-color: #fff;
+    color: #000;
 }
 
 .popup-container{
@@ -75,7 +89,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 @keyframes fade {
@@ -90,9 +104,10 @@
 
 .popup{
     width: 60%;
-    height: 150px;
+    height: 200px;
     background-color: #1b263b;
     color: var(--white);
+
     position: relative;
     display: flex;
     align-items: center;
@@ -147,12 +162,29 @@
     font-family: 'Roboto';
 }
 
-.popup-item{
+.popup-item {
     width: 50%;
     height: 70%;
     display: flex;
     text-align: center;
     flex-direction: column;
+}
+
+.warns-container{
+    display: flex;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.warn{
+    display: flex;
+    background-color: #e63946;
+    border-radius: 5px;
+    padding: 5px;
+
+    width: 300px;
+    color:#fff;
+
 }
 
 .savechanges{
