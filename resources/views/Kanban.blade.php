@@ -10,11 +10,23 @@
     @section('content')
     @if(count($data) > 0)
         <div class="newKanban">
+            <div class="warns-container">
+                @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                        <div class="warn">
+                            <p id="text-error">{{$error}}</p>
+                        </div>
+                    @endforeach
+            @endif
+            </div>
+            <form action="{{route('newTask', ['id' => Request::segment(2)])}}" method="POST" class="form-task-container">
+            @csrf
             <p>Titulo</p>
-            <input type="text" placeholder="Título da tarefa" class="addtask title" autocomplete="off">
+            <input type="text" name="title" placeholder="Título da tarefa" class="default-input title spaced" autocomplete="off">
             <p>Objetivo da tarefa</p>
-            <input type="text" name="kanbanbody" class="addtask" id="addtask" placeholder="Insira uma tarefa ao Kanban" autocomplete="off" >
+            <input type="text" name="body" class="default-input spaced" id="addtask" placeholder="Insira uma tarefa ao Kanban" autocomplete="off" >
             <button id="savechanges" class="button-option savechanges" type="submit">Inserir tarefa</button>
+            </form>
         </div>
         <div class="content-container">
             <x-StateBox name="Á FAZER" input="Y" colortitle='#4361ee' wip=""/>

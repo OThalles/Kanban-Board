@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('status', function (Blueprint $table) {
+        Schema::create('statuses', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name');
             $table->uuid('kanban_id')->nullable(false);
+            $table->integer('stage');
             $table->timestamps();
         });
     }

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('status', function(Blueprint $table){
+        Schema::table('statuses', function(Blueprint $table){
             $table->foreign('kanban_id')->references('id')->on('kanbans');
         });
     }
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('status', function(Blueprint $table){
+        Schema::table('statuses', function(Blueprint $table){
             $table->dropForeign('kanban_id');
         });
     }

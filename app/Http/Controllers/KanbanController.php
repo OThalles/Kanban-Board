@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\KanbanService;
+use App\Http\Controllers\StatusController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,7 +25,12 @@ class KanbanController extends Controller
     public function create(Request $request)
     {
         header('Content-Type: application/json');
-        return $this->kanbanService->create($request, Auth::user()->id);;
+        $newKanban = $this->kanbanService->create($request, Auth::user()->id);
+        $status = new StatusController();
+        $status->create($newKanban->id);
+
+        return redirect()->back();
+
     }
 
 }

@@ -20,8 +20,8 @@ class KanbanRepository implements KanbanRepositoryInterface
 
     }
 
-    public function create($data): void
+    public function create($data)
     {
-        Kanban::create($data);
+        return Kanban::create($data);
     }
 }

@@ -13,7 +13,7 @@ class Status extends Model
 
     protected $fillable =
     [
-        'name','kanban_id'
+        'stage','kanban_id'
     ];
 
     public function task() {

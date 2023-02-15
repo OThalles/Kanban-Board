@@ -26,12 +26,38 @@
 }
 
 .task {
+    position: relative;
     margin: 10px;
-    padding: 10px 10px;
-    width: 90%;
     background-color: #262b56;
     border-radius: 7px;
+    width: 90%;
+    height: auto;
 }
+
+
+.changestatus{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    border-radius: 7px;
+    transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', 'sans-serif';
+    color: #fff;
+}
+
+.task:hover .changestatus{
+    height: 100%;
+}
+
 
 .task-title p{
     color: #fff;
@@ -104,4 +130,16 @@ flex-direction: column;
 .newKanban p {
     color: #fff;
     font-family: 'Roboto';
+}
+
+.form-task-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spaced {
+    margin: 5px
 }

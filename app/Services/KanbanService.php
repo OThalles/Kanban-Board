@@ -52,7 +52,7 @@ class KanbanService
         }
 
         $newKanban = $this->kanbanRepository->create($data);
-        return redirect()->back();
+        return $newKanban;
 
     }
 }

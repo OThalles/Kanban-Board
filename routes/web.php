@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KanbanController;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,9 @@ Route::get('/', function () {
 Route::get('/kanban/{id}', [KanbanController::class, 'index'])->name('kanban')->middleware('auth');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
+
 Route::post('/newKanban', [KanbanController::class, 'create'])->name('newKanban');
+Route::post('/newTask', [TaskController::class, 'create'])->name('newTask');
 
 
 Route::get('/register', [UserController::class, 'register'])->name('register');

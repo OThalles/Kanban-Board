@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::table('tasks', function(Blueprint $table){
             $table->foreign('status_id')
             ->references('id')
-            ->on('status');
+            ->on('statuses');
         });
     }
 
