@@ -85,3 +85,22 @@ body {
 .footer-item {
     color: white;
 }
+
+
+.default-input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    outline: 0;
+    background-color: #0d1b2a;
+    color: var(--white);
+    border: 2px solid black;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    outline: 0;
+}
+
+.default-input::placeholder{
+    color: var(--white);
+    font-family: 'Roboto';
+}

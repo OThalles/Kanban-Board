@@ -19,7 +19,7 @@
                     @endforeach
             @endif
             </div>
-            <form action="{{route('newTask', ['id' => Request::segment(2)])}}" method="POST" class="form-task-container">
+            <form action="{{route('newTask', ['kanban_id' => Request::segment(2)])}}" method="POST" class="form-task-container">
             @csrf
             <p>Titulo</p>
             <input type="text" name="title" placeholder="Título da tarefa" class="default-input title spaced" autocomplete="off">
@@ -29,9 +29,16 @@
             </form>
         </div>
         <div class="content-container">
-            <x-StateBox name="Á FAZER" input="Y" colortitle='#4361ee' wip=""/>
-            <x-StateBox name="EM PROGRESSO" input="" colortitle='#f4a259' wip="3/4"/>
-            <x-StateBox name="TERMINADO" input="" colortitle='#7ae582' wip=""/>
+            <?php $stages = [0 => 'A FAZER',
+                             1 => 'EM PROGRESSO',
+                             2 => 'FINALIZADO']; ?>
+
+            @foreach($statuses as $key => $status)
+                <x-StateBox :name="$stages[$status->stage]" :colortitle="$status->color" wip=""/>
+            @endforeach
+            {{-- <x-StateBox name="EM PROGRESSO" input="" colortitle='#f4a259' wip="3/4"/>
+            <x-StateBox name="TERMINADO" input="" colortitle='#7ae582' wip=""/> --}}
+
         </div>
     @endif
     @endsection

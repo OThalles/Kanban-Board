@@ -6,6 +6,7 @@ use App\Services\KanbanService;
 use App\Http\Controllers\StatusController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Kanban;
 
 class KanbanController extends Controller
 {
@@ -19,7 +20,9 @@ class KanbanController extends Controller
     public function index(Request $request)
     {
         $data = $this->kanbanService->getOne($request, Auth::User()->id);
-        return view('Kanban', ['data' => $data]);
+
+        $statuses = $this->kanbanService->getKanbanStatuses($request->id);
+        return view('Kanban', ['data' => $data, 'statuses' => $statuses]);
     }
 
     public function create(Request $request)

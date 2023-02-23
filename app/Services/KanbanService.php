@@ -30,6 +30,11 @@ class KanbanService
 
     }
 
+    public function getKanbanStatuses($kanbanid){
+        $getStatuses = $this->kanbanRepository->getKanbanStatuses($kanbanid);
+        return $getStatuses;
+    }
+
     public function getKanbans($user)
     {
         return $this->kanbanRepository->getKanbans($user);

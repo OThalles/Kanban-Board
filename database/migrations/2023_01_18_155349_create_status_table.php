@@ -17,6 +17,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->uuid('kanban_id')->nullable(false);
             $table->integer('stage');
+            $table->string('color')->nullable(false);
             $table->timestamps();
         });
     }

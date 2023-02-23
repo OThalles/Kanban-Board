@@ -16,7 +16,7 @@
                 <p >Nome do novo Kanban</p>
                 <form action="{{route('newKanban')}}" method="POST">
                     @csrf
-                    <input dusk="inputNewKanban" type="text" name="name" placeholder="Digite o nome do novo Kanban" class="popup-input" id="popup-input">
+                    <input dusk="inputNewKanban" type="text" name="name" placeholder="Digite o nome do novo Kanban" class="default-input" id="popup-input">
                     <button class="button-option savechanges">Salvar</button>
                 </form>
             </div>
