@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Services\TaskService;
 use Illuminate\Http\Request;
-use App\Http\Controllers\StatusController;
 use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
@@ -18,10 +17,8 @@ class TaskController extends Controller
 
     public function create(Request $request)
     {
-
-        $status = StatusController::findFirstStatusByKanban($request->kanban_id);
-        return $this->taskService->create($request,$status);
+        header('Content-Type: application/json');
+        return $this->taskService->create($request);
     }
-
 
 }

@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->integer('status')->nullable(false)->default(0);
             $table->string('title');
             $table->string('body');
-            $table->uuid('status_id')->nullable(false);
             $table->timestamps();
         });
     }

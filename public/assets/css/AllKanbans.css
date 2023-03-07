@@ -152,23 +152,6 @@
     flex-direction: column;
 }
 
-.warns-container{
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    box-sizing: border-box;
-}
-
-.warn{
-    display: flex;
-    background-color: #e63946;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-    width: 300px;
-    color:#fff;
-
-}
 
 .savechanges{
     width: 100px;

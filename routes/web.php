@@ -28,6 +28,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware(
 Route::post('/newKanban', [KanbanController::class, 'create'])->name('newKanban');
 Route::post('/newTask', [TaskController::class, 'create'])->name('newTask');
 
+Route::post('/getTasks', [TaskController::class, 'getTaskByStatus'])->middleware('auth');
+
 
 Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::post('/register', [UserController::class, 'store'])->name('newUser');

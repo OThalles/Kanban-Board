@@ -60,4 +60,5 @@ class KanbanService
         return $newKanban;
 
     }
+
 }

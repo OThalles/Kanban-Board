@@ -14,7 +14,6 @@ closeButton.addEventListener('click', function(){
 
 })
 
-
 function newKanbanElement(){
     table = document.querySelector('home-table');
 

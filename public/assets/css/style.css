@@ -19,7 +19,6 @@ body {
 }
 
 
-
 .content-container {
     background-color: #293241;
     height: 800px;
@@ -104,3 +103,31 @@ body {
     color: var(--white);
     font-family: 'Roboto';
 }
+
+/*Estilização dos erros */
+.warns-container{
+    display: none;
+    flex-direction: column;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.warn{
+    animation: .5s fade;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 300px;
+    color:#fff;
+}
+
+.success{
+    background-color: green;
+}
+
+.error{
+    background-color: #e63946;
+}
+/*Fim da estilização dos erros*/

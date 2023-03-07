@@ -13,12 +13,11 @@ class TaskService
         $this->taskRepository = $taskRepository;
     }
 
-    public function create($request, $status)
+    public function create($request)
     {
         $data = [
             'title' => $request->title,
             'body' => $request->body,
-            'status_id' => $status
         ];
 
         $validatorTask = Validator::make($request->all(),
@@ -28,12 +27,19 @@ class TaskService
         ], [
             'title.required' => 'É necessário um título para a tarefa.',
             'body.required' => "É necessário um objetivo para a tarefa.",
-            'kanban_id.required' => "Ocorreu um erro",
         ]);
+
         if($validatorTask->fails()){
-            return redirect()->back()->withErrors($validatorTask);
+            return response()->json(['errors' => $validatorTask->errors()], 422);
         }
 
-        $this->taskRepository->create($data);
+        $newTask = $this->taskRepository->create($data);
+        if($newTask){
+            return response()->json(['response' => $newTask], 200);
+        }
+
+
+
     }
+
 }

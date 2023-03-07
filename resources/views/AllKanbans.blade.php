@@ -55,7 +55,7 @@
                 <tr>
                     <td>{{$item->id}}</td>
                     <td>
-                      <a href="{{route('kanban', ['id' => $item->id])}}"> {{$item->name}} </a>
+                      <a href="{{route('kanban', ['id' => $item->id])}}" id="kanban-name"> {{$item->name}} </a>
                     </td>
                     <td>{{$item->created_at}}</td>
                     <td>{{$item->updated_at}}</td>

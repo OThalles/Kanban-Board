@@ -20,10 +20,6 @@ class KanbanRepository implements KanbanRepositoryInterface
 
     }
 
-    public function getKanbanStatuses($kanbanid){
-        $statuses = Kanban::find($kanbanid)->status;
-        return $statuses;
-    }
 
     public function create($data)
     {

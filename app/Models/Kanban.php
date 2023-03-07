@@ -16,9 +16,9 @@ class Kanban extends Model
         'name', 'user_id'
     ];
 
-    public function status()
+    public function task()
     {
-        return $this->hasMany(Status::class)->orderBy('stage');
+        return $this->hasMany(Task::class)->orderBy('status');
     }
 
 }
