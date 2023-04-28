@@ -57,5 +57,23 @@ class UserService
 
         $request->session()->regenerateToken();
 
+        return redirect()->route('login');
+
+    }
+
+    public function getKanbansPerUser($user)
+    {
+        return $this->userRepository->getKanbansPerUser($user);
+    }
+
+    public function getUserId($user)
+    {
+        return $this->userRepository->getUserId($user);
+    }
+
+    public function getRegistrationDate($user)
+    {
+        $registrationDate = $this->userRepository->getRegistrationDate($user)->pluck('created_at')->first();
+        return str_replace('-','/', $registrationDate->format('d-m-Y'));
     }
 }
